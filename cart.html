@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantran - Cart</title>
+  <!--  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="bg-gray-50 text-gray-900">
+  <header class="w-full bg-white shadow">
+    <nav class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="./index.html" class="text-xl font-semibold">Niyantran</a>
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="./menu.html" class="hover:underline">Menu</a>
+        <a href="./about.html" class="hover:underline">About</a>
+        <a href="./cart.html" class="hover:underline">Cart</a>
+        <a href="./checkout.html" class="hover:underline">Checkout</a>
+        <a href="./contact.html" class="hover:underline">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full py-8 px-6">
+    <h2 class="text-2xl font-semibold mb-4">Your Cart</h2>
+    <div id="cart-contents" class="space-y-4"></div>
+    <div class="flex justify-between items-center mt-6 border-t pt-4">
+      <span class="text-lg font-semibold">Total: $<span id="cart-total">0.00</span></span>
+      <a href="./checkout.html" class="bg-accent text-white px-4 py-2 rounded">Checkout</a>
+    </div>
+  </main>
+
+  <footer class="w-full bg-gray-800 text-white py-6 mt-8">
+    <div class="max-w-screen-xl mx-auto px-4 text-sm">© <span id="year4"></span> Niyantran. All rights reserved.</div>
+  </footer>
+
+  <script>
+    function format(n){ return Number(n).toFixed(2); }
+    function render(){
+      const cart = JSON.parse(localStorage.getItem('ny_cart') || '{}');
+      const container = document.getElementById('cart-contents');
+      container.innerHTML = '';
+      let total = 0;
+      Object.values(cart).forEach(item => {
+        const subtotal = (item.qty || 0) * (item.price || 0);
+        total += subtotal;
+        const div = document.createElement('div');
+        div.className = 'flex items-center justify-between bg-white rounded-lg shadow p-4';
+        div.innerHTML = `
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 overflow-hidden rounded-md bg-gray-100 flex items-center justify-center">
+              <span class="text-xs">IMG</span>
+            </div>
+            <div>
+              <div class="font-semibold">${item.name}</div>
+              <div class="text-sm text-gray-600">Price $${item.price.toFixed(2)} • Qty ${item.qty}</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="decr bg-gray-200 px-2 py-1 rounded" data-id="${item.id}">-</button>
+            <span class="px-2">${item.qty}</span>
+            <button class="incr bg-gray-200 px-2 py-1 rounded" data-id="${item.id}">+</button>
+            <span class="ml-4 font-semibold">$${subtotal.toFixed(2)}</span>
+          </div>`;
+        container.appendChild(div);
+      });
+      document.getElementById('cart-total').textContent = format(total);
+    }
+    document.addEventListener('click', (e) => {
+      if(e.target.classList.contains('incr')){
+        const id = Number(e.target.dataset.id);
+        const cart = JSON.parse(localStorage.getItem('ny_cart') || '{}');
+        if(cart[id]) cart[id].qty += 1; else cart[id] = {id, name: cart[id].name, price: cart[id].price, qty: 1};
+        localStorage.setItem('ny_cart', JSON.stringify(cart));
+        render();
+      }
+      if(e.target.classList.contains('decr')){
+        const id = Number(e.target.dataset.id);
+        const cart = JSON.parse(localStorage.getItem('ny_cart') || '{}');
+        if(cart[id]){ cart[id].qty -= 1; if(cart[id].qty <= 0) delete cart[id]; }
+        localStorage.setItem('ny_cart', JSON.stringify(cart));
+        render();
+      }
+    });
+    document.getElementById('year4').textContent = new Date().getFullYear();
+    // Initial render
+    render();
+  </script>
+</body>
+</html>
