@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantran - About</title>
+  <!--  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="bg-gray-50 text-gray-900">
+  <header class="w-full bg-white shadow">
+    <nav class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="./index.html" class="text-xl font-semibold">Niyantran</a>
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="./menu.html" class="hover:underline">Menu</a>
+        <a href="./about.html" class="hover:underline">About</a>
+        <a href="./cart.html" class="hover:underline">Cart</a>
+        <a href="./checkout.html" class="hover:underline">Checkout</a>
+        <a href="./contact.html" class="hover:underline">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full py-12 px-6">
+    <section class="w-full mb-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex-1">
+          <h1 class="text-3xl font-bold">About Niyantran</h1>
+          <p class="mt-4 text-gray-700">A modern coffee concept blending precision, craft, and community.</p>
+          <p class="mt-2 text-gray-700">Founders: GSR and MBR. Building a coffee experience that respects the bean and the moment.</p>
+        </div>
+        <div class="w-full md:w-1/2 h-64 md:h-80 overflow-hidden rounded-lg border border-gray-200">
+          <img src="https://pixabay.com/get/gacb8bc712aaef2d969c2fc6028ec77109cdbcd35c45286d3230559c408adf328b2845316feabdffa78deb075ea23a4e905c0658562e00102494954991fc4a42a_640.jpg" class="w-full h-full object-cover" alt="Founders" />
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="text-lg font-semibold mb-2">GSR</h3>
+        <p class="text-sm text-gray-600">Co-founder focusing on sourcing and roasting philosophy.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="text-lg font-semibold mb-2">MBR</h3>
+        <p class="text-sm text-gray-600">Co-founder guiding customer experience and design</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-gray-800 text-white py-6 mt-12">
+    <div class="max-w-screen-xl mx-auto px-4 text-sm">© <span id="year2"></span> Niyantran. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
