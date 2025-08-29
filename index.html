@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantran - Home</title>
+  <!--  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6b4f2f',
+            secondary: '#d97706'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="bg-gray-50 text-gray-900">
+  <header class="w-full bg-white shadow">
+    <nav class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="./index.html" class="text-xl font-semibold">Niyantran</a>
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="./menu.html" class="hover:underline">Menu</a>
+        <a href="./about.html" class="hover:underline">About</a>
+        <a href="./cart.html" class="hover:underline">Cart</a>
+        <a href="./checkout.html" class="hover:underline">Checkout</a>
+        <a href="./contact.html" class="hover:underline">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full">
+    <!-- Hero -->
+    <section class="relative w-full h-screen">
+      <img src="https://images.unsplash.com/photo-1599284169912-4bb5e4f2c91f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxMHx8QSUyMHZpYnJhbnQlMjBjb2ZmZWUlMjBzaG9wJTIwaW50ZXJpb3IlMjB3aXRoJTIwd2FybSUyMGxpZ2h0fGVufDB8MHx8fDE3NTY0NTk1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080" class="w-full h-full object-cover" alt="Hero image">
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center px-6">
+          <h1 class="text-4xl md:text-6xl font-bold text-white">Niyantran</h1>
+          <p class="mt-4 text-white/90 text-lg md:text-2xl">Artful coffee. Thoughtful control.</p>
+          <a href="./menu.html" class="mt-6 inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primary-700">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About teaser (full width) -->
+    <section class="w-full py-16 px-6 bg-white">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">Crafted to perfection</h2>
+        <p class="mt-3 text-gray-700">Experience precision in every pour and the beauty of a coffee ritual designed to soothe the senses.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-gray-800 text-white py-6">
+    <div class="max-w-screen-xl mx-auto px-4 text-sm">
+      © <span id="year"></span> Niyantran. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
