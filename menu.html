@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantran - Menu</title>
+  <!--  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#6b4f2f', accent: '#d97706' } } } }
+  </script>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="bg-gray-50 text-gray-900">
+  <header class="w-full bg-white shadow">
+    <nav class="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="./index.html" class="text-xl font-semibold">Niyantran</a>
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="./menu.html" class="hover:underline">Menu</a>
+        <a href="./about.html" class="hover:underline">About</a>
+        <a href="./cart.html" class="hover:underline">Cart</a>
+        <a href="./checkout.html" class="hover:underline">Checkout</a>
+        <a href="./contact.html" class="hover:underline">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full py-8 px-6">
+    <section class="mb-6">
+      <h2 class="text-2xl font-semibold">Menu</h2>
+      <p class="text-gray-700">Default items to get you started. Add to cart and customize your order.</p>
+    </section>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Espresso -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden h-48 w-full">
+          <img src="https://pixabay.com/get/g1fbcb73389b4c7d3c83ffcd85307fa99b015936b1f26e3a974c3dbcff2b868fb10b5344a9cddff99b02f7f3a528c2eb32d3408da06bc0a255b9033376df53ca9_640.jpg" class="w-full h-full object-cover" alt="Espresso">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Espresso</h3>
+          <p class="text-sm text-gray-600">Double shot, balanced and bold.</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-semibold">$2.50</span>
+            <button class="add-to-cart bg-primary text-white px-3 py-1 rounded">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Americano -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden h-48 w-full">
+          <img src="https://pixabay.com/get/g19dc8d9756ab8a7d969baa8f8ba49e6f6138644b138531b573054aa352d54595f7df309c0f57b288437a94e8820e97947f41197b5dfb651ea1cf07dd7e4db3ac_640.jpg" class="w-full h-full object-cover" alt="Americano">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Americano</h3>
+          <p class="text-sm text-gray-600">Espresso diluted to smooth perfection.</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-semibold">$3.00</span>
+            <button class="add-to-cart bg-primary text-white px-3 py-1 rounded">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Cappuccino -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden h-48 w-full">
+          <img src="https://images.pexels.com/photos/207287/pexels-photo-207287.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="w-full h-full object-cover" alt="Cappuccino">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Cappuccino</h3>
+          <p class="text-sm text-gray-600">Creamy milk, balanced espresso aroma.</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-semibold">$3.50</span>
+            <button class="add-to-cart bg-primary text-white px-3 py-1 rounded">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Latte -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden h-48 w-full">
+          <img src="https://images.unsplash.com/photo-1536767555358-86c23f61d2fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxMYXR0ZSUyMHdpdGglMjBsYXR0ZSUyMGFydCUyMGFuZCUyMGZvYW18ZW58MHwwfHx8MTc1NjQ1OTUwOHww&ixlib=rb-4.1.0&q=80&w=1080" class="w-full h-full object-cover" alt="Latte">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Latte</h3>
+          <p class="text-sm text-gray-600">Silky milk, smooth espresso base.</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-semibold">$4.00</span>
+            <button class="add-to-cart bg-primary text-white px-3 py-1 rounded">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Cold Brew -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden h-48 w-full">
+          <img src="https://pixabay.com/get/gcf2e8680ffe75949cbbf3c1e74d9392032e5e438219950ba765969b5202e6340af46acc2462980af670e710699422e16898222cf34331459725257dbf85a090d_640.jpg" class="w-full h-full object-cover" alt="Cold Brew">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Cold Brew</h3>
+          <p class="text-sm text-gray-600">Smooth, rich, and fresh over ice.</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-semibold">$3.75</span>
+            <button class="add-to-cart bg-primary text-white px-3 py-1 rounded">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Mocha -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-hidden h-48 w-full">
+          <img src="https://images.unsplash.com/photo-1608363087711-9280f549a29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxNb2NoYSUyMGNvZmZlZSUyMHdpdGglMjBjaG9jb2xhdGUlMjBzd2lybHxlbnwwfDB8fHwxNzU2NDU5NTA5fDA&ixlib=rb-4.1.0&q=80&w=1080" class="w-full h-full object-cover" alt="Mocha">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Mocha</h3>
+          <p class="text-sm text-gray-600">Chocolate and coffee, a comforting classic.</p>
+          <div class="flex items-center justify-between mt-2">
+            <span class="font-semibold">$4.25</span>
+            <button class="add-to-cart bg-primary text-white px-3 py-1 rounded">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-gray-800 text-white py-6 mt-8">
+    <div class="max-w-screen-xl mx-auto px-4 text-sm">© <span id="year3"></span> Niyantran. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Simple local cart persistence (items are pre-defined with IDs)
+    const menuItems = {
+      1: {id:1, name:'Espresso', price:2.5},
+      2: {id:2, name:'Americano', price:3.0},
+      3: {id:3, name:'Cappuccino', price:3.5},
+      4: {id:4, name:'Latte', price:4.0},
+      5: {id:5, name:'Cold Brew', price:3.75},
+      6: {id:6, name:'Mocha', price:4.25}
+    };
+
+    function saveCart(cart){ localStorage.setItem('ny_cart', JSON.stringify(cart)); }
+    function loadCart(){ const raw = localStorage.getItem('ny_cart'); return raw ? JSON.parse(raw) : {}; }
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const itemEl = e.target.closest('.bg-white');
+        const index = Array.from(document.querySelectorAll('.add-to-cart')).indexOf(e.target) + 1;
+        const item = menuItems[index];
+        if(!item) return;
+        const cart = loadCart();
+        cart[item.id] = (cart[item.id] || {qty:0, ...item});
+        cart[item.id].qty += 1;
+        saveCart(cart);
+        alert(item.name + ' added to cart');
+      });
+    });
+    // Simple year
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
